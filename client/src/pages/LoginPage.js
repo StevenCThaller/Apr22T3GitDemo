@@ -1,7 +1,8 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 const LoginPage = () => {
-  return <div>LoginPage</div>;
+  return <Container></Container>;
 };
 
 export default LoginPage;
