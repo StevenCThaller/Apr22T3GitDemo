@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import Dashboard from "./pages/Dashboard";
+import Header from "./components/Header";
+import CharacterList from "./components/CharacterList";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import CreateCharacter from "./components/CreateCharacter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="" element={<LandingPage />} />
+        <Route path=":characterType" element={<Dashboard />}>
+          <Route path="" element={<CharacterList />} />
+          <Route path="create" element={<CreateCharacter />} />
+        </Route>
+        <Route path="login" element={<LoginPage />} />
+        <Route path="register" element={<RegisterPage />} />
+      </Routes>
+    </>
   );
 }
 
