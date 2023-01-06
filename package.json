@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "client": "npm start --workspace=client",
-    "start": "npm run client",
+    "server": "npm start --workspace=server",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,5 +15,8 @@
   "workspaces": [
     "client",
     "server"
-  ]
+  ],
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
 }
