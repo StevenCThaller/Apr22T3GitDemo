@@ -44,13 +44,5 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/StevenCThaller/Apr22T3GitDemo.git"
-  },
-  "bugs": {
-    "url": "https://github.com/StevenCThaller/Apr22T3GitDemo/issues"
-  },
-  "homepage": "https://github.com/StevenCThaller/Apr22T3GitDemo#readme"
+  "license": "ISC"
 }
