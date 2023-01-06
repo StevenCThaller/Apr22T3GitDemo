@@ -1,7 +1,13 @@
 import React from "react";
+import { Container, Form } from "react-bootstrap";
 
 const RegisterPage = () => {
-  return <div>RegisterPage</div>;
+  const handleSubmit = (e) => {};
+  return (
+    <Container>
+      <Form onSubmit={handleSubmit}></Form>
+    </Container>
+  );
 };
 
 export default RegisterPage;
